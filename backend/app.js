@@ -13,7 +13,7 @@ app.use(cookieParser());
 app.use(cors())
 app.use(express.json())
 app.use(express.static('Uploads'))
-app.use('/api/Note', employrouter.router)
+app.use('/api/List', employrouter.router)
 app.use('/api/Auth', authrouter.router)
 
 
