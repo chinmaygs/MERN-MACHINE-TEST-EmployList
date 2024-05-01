@@ -6,6 +6,7 @@ function Login() {
   const [error, setError] = useState(null)
   const [IsLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
+  
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsLoading(true)
@@ -13,7 +14,6 @@ function Login() {
     const formData = new FormData(e.target);
     const username = formData.get("username");
     const password = formData.get("password");
-
     try {
       const res = await loginUser({
         username: username,
@@ -35,6 +35,7 @@ function Login() {
       setIsLoading(false)
     }
   }
+  
   return (
     <div className="bg-teal-100 min-h-screen">
       <h1 className="text-center pt-16 text-6xl font-extralight font-sans">Admin Login</h1>
