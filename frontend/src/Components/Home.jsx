@@ -29,8 +29,6 @@ function Home() {
     }
     catch (error) {
       console.log(error)
-      if (error.response.status === 401)
-        navigate('/')
     }
   }
 
