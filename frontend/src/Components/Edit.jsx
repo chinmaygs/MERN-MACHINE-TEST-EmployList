@@ -41,8 +41,6 @@ function Edit() {
   }, [isloading])
 
 
-
-
   const updateEmployee = async (e) => {
     e.preventDefault();
     try {
@@ -59,12 +57,9 @@ function Edit() {
       )
       await editEmploy(data._id, formdata)
       navigate('/Home')
-
     }
     catch (error) {
       console.log(error)
-      if (error.response && error.response.status === 401)
-        navigate('/')
     }
   }
 
