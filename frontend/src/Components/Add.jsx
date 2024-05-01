@@ -41,22 +41,18 @@ function Add() {
         formData.append('f_Course', course);
       }
       );
-
       await addEmploy(formData);
       navigate("/Home");
     }
-
     catch (err) {
       console.log(err)
     }
   }
 
   const uploadImage = (event) => {
-
     const file = event.target.files[0];
     if (file) {
       setEmploy({ ...employ, img: file })
-
       const reader = new FileReader();
       reader.onload = () => {
         console.log('File loaded successfully');
