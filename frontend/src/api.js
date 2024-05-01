@@ -1,27 +1,27 @@
 import axios from "axios"
 axios.defaults.withCredentials = true;
 
-const NoteUrl = "http://localhost:3000/api/Note"
+const ListUrl = "http://localhost:3000/api/List"
 
 export const getEmployList = async (id) => {
     id = id || ''
-    return await axios.get(`${NoteUrl}/${id}`)
+    return await axios.get(`${ListUrl}/${id}`)
 }
 
 export const addEmploy = async (Note) => {
     console.log(Note)
-    return await axios.post(`${NoteUrl}`, Note)
+    return await axios.post(`${ListUrl}`, Note)
         .then(res => console.log(res))
         .catch(err => console.log(err))
 }
 
 export const deleteEmploy = async (id) => {
-    return await axios.delete(`${NoteUrl}/${id}`)
+    return await axios.delete(`${ListUrl}/${id}`)
 }
 
 export const editEmploy = async (id, Note) => {
     console.log(Note)
-    return await axios.patch(`${NoteUrl}/${id}`, Note)
+    return await axios.patch(`${ListUrl}/${id}`, Note)
         .then(res => console.log(res))
         .catch(err => console.log(err))
 }
