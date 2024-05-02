@@ -4,7 +4,7 @@ SETTING UP THE APPLICATION
 
 Make sure you have downloaded the file correctly.
 
-In the backend folder create an env file (environmrnt variables) consisting of
+In the backend folder create an .env file (environmrnt variables) consisting of
 
         DB_URL='Enter your database url here' 
         JWT_KEY='Enter your secret key here'
