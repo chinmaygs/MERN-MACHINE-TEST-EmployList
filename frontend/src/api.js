@@ -30,8 +30,7 @@ const AuthUrl = "http://localhost:3000/api/Auth"
 
 export const addUser = async (user) => {
     return await axios.post(`${AuthUrl}/register`, user)
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+    
 }
 
 export const loginUser = async (user) => {
