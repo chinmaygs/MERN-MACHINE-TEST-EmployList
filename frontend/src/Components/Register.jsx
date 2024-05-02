@@ -26,7 +26,7 @@ function Register() {
       navigate("/")
     } catch (err) {
       console.log(err)
-      setError(err.response)
+      setError(err.response.data.messsage)
     } finally {
       setIsLoading(false)
     }
