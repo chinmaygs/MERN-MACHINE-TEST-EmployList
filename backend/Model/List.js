@@ -6,7 +6,7 @@ const employSchema = new Schema({
     f_Id: { type: Schema.Types.UUID },
     f_Image: { type: String, required: true },
     f_Name: { type: String, required: true },
-    f_Email: { type: String, required: true, unique: true, validate: [isEmail, 'invalid email'] },
+    f_Email: { type: String, required: true, unique: true, validate: [isEmail, 'invalid email address'] },
     f_Mobile: {
         type: Number,
         validate: {
@@ -26,7 +26,7 @@ const employSchema = new Schema({
 
 const UserSchema = new Schema({
     f_sno: { type: Schema.Types.UUID },
-    f_Email: { type: String, require: true, unique: true },
+    f_Email: { type: String, require: true, unique: true, validate: [isEmail, 'invalid email address']  },
     f_userName: { type: String, require: true, unique: true },
     f_Pwd: { type: String, require: true }
 
